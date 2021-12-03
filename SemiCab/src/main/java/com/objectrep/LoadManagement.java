@@ -233,10 +233,10 @@ public class LoadManagement {
 	@FindBy(xpath = "//p[text()='No records found']")
 	private WebElement NoRecordsFound;
 	
-	@FindBy(xpath = "(//*[local-name()='svg' and @height='1.5em'])[3]")
+	@FindBy(xpath = "(//div[text()='Schedule']/parent::div/following-sibling::div//*[name()='svg'])[2]")
 	private WebElement EventStatusIcon;
 	
-	@FindBy(xpath = "//input[@class='MuiInputBase-input MuiOutlinedInput-input']")
+	@FindBy(xpath = "//div[text()='Status Event*']/following-sibling::div/child::div/descendant::div/child::input")
 	private WebElement SelectStatusEvent;
 	
 	@FindBy(xpath = "//span[text()='Arrived']")
@@ -275,12 +275,35 @@ public class LoadManagement {
 	
 	@FindBy(xpath = "(//*[local-name()='svg' and @class='MuiSvgIcon-root'])[5]")
 	private WebElement DepartureCalender;
+	
+	@FindBy(xpath = "//div[contains(text(),'Estimated Time of Departure')]")
+	private WebElement VerifyEstimatedTimeOfDeparture;
+	
+	@FindBy(xpath = "//span[text()='Estimated Time of Departure']")
+	private WebElement EstimatedTimeOfDeparture;
+	
+	@FindBy(xpath = "//span[text()='Estimated Time of Arrival']")
+	private WebElement EstimatedTimeOfArrival;
+	
+	@FindBy(xpath = "//div[contains(text(),'Estimated Time of Arrival')]")
+	private WebElement VerifyEstimatedOfArrival;
 	//Getters
-
 
 
 	public WebElement getAssignDriverTruckNumber() {
 		return AssignDriverTruckNumber;
+	}
+
+	public WebElement getEstimatedTimeOfArrival() {
+		return EstimatedTimeOfArrival;
+	}
+
+	public WebElement getEstimatedTimeOfDeparture() {
+		return EstimatedTimeOfDeparture;
+	}
+
+	public WebElement getVerifyEstimatedTimeOfDeparture() {
+		return VerifyEstimatedTimeOfDeparture;
 	}
 
 	public WebElement getNoRecordsFound() {
@@ -643,6 +666,12 @@ public class LoadManagement {
 	public WebElement getSelectdepartureTime() {
 		return SelectdepartureTime;
 	}
+
+	public WebElement getVerifyEstimatedOfArrival() {
+		return VerifyEstimatedOfArrival;
+	}
+	
+	
 	
 	
 	

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Scripts.ValidateEstimatedTimeOfDeparture">
+      <class name="Scripts.ValidateArrivedStatusEvent">
         <methods>
           <include name="configBT"/>
           <include name="configBM"/>
-          <include name="ValidateEstimatedDeparture"/>
+          <include name="ValidateArrivedStatus"/>
           <include name="configBC"/>
           <include name="conficAC"/>
         </methods>
-      </class> <!-- Scripts.ValidateEstimatedTimeOfDeparture -->
+      </class> <!-- Scripts.ValidateArrivedStatusEvent -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
